@@ -1,0 +1,30 @@
+plugins {
+id 'java'
+}
+
+
+group = 'com.example'
+version = '0.1.0'
+
+
+java {
+toolchain {
+languageVersion = JavaLanguageVersion.of(21)
+}
+}
+
+
+subprojects {
+apply plugin: 'java'
+
+
+repositories {
+mavenCentral()
+}
+
+
+tasks.withType(JavaCompile).configureEach {
+options.encoding = 'UTF-8'
+options.release = 21
+}
+}
