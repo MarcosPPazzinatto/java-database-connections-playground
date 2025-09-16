@@ -1,0 +1,14 @@
+plugins {
+id 'application'
+}
+
+
+dependencies {
+implementation 'org.postgresql:postgresql:42.7.3'
+implementation 'com.zaxxer:HikariCP:5.1.0'
+}
+
+
+application {
+mainClass = 'com.example.jdbc.App'
+}
